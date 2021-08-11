@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/media/sf_ASU_Courses/CSE330/CSE330-Project/Sem.h
+threads.h
+/media/sf_ASU_Courses/CSE330/CSE330-Project/threads.h
+
+/media/sf_ASU_Courses/CSE330/CSE330-Project/proj-4.c
+Sem.h
+/media/sf_ASU_Courses/CSE330/CSE330-Project/Sem.h
+
+/media/sf_ASU_Courses/CSE330/CSE330-Project/q.h
+stdio.h
+-
+stdlib.h
+-
+tcb.h
+/media/sf_ASU_Courses/CSE330/CSE330-Project/tcb.h
+
+/media/sf_ASU_Courses/CSE330/CSE330-Project/tcb.h
+ucontext.h
+-
+
+/media/sf_ASU_Courses/CSE330/CSE330-Project/threads.h
+q.h
+/media/sf_ASU_Courses/CSE330/CSE330-Project/q.h
+
