@@ -1,0 +1,19 @@
+Adjacency List
+
+Atlanta        Boston(350.50), Dallas(456.50), 
+Boston         New York(220.75), 
+Chicago        New York(680.50), Seattle(672.50), 
+Dallas         Boston(400.00), 
+New York       Dallas(560.00), 
+Seattle        Seattle(150.00), 
+
+Depth First Search Result
+
+City Name      Parent    dTime     fTime     
+=========      ======    =====     =====     
+Atlanta        none      1         8         
+Boston         Atlanta   2         7         
+Chicago        none      9         12        
+Dallas         New York  4         5         
+New York       Boston    3         6         
+Seattle        Chicago   10        11        

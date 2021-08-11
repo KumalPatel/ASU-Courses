@@ -1,0 +1,27 @@
+Adjacency List
+
+Atlanta        Chicago(298.00), Dallas(293.00), Kansas(491.00), 
+Boston         El Paso(1022.00), New York(278.00), 
+Chicago        Houston(598.00), 
+Dallas         Miami(479.00), New York(423.00), 
+El Paso        New York(746.00), 
+Houston        Kansas(408.00), 
+Kansas         Chicago(289.00), 
+Miami          Phoenix(489.00), 
+New York       Atlanta(439.00), 
+Phoenix        Miami(607.00), 
+
+Depth First Search Result
+
+City Name      Parent    dTime     fTime     
+=========      ======    =====     =====     
+Atlanta        none      1         16        
+Boston         none      17        20        
+Chicago        Atlanta   2         7         
+Dallas         Atlanta   8         15        
+El Paso        Boston    18        19        
+Houston        Chicago   3         6         
+Kansas         Houston   4         5         
+Miami          Dallas    9         12        
+New York       Dallas    13        14        
+Phoenix        Miami     10        11        

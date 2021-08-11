@@ -1,0 +1,54 @@
+
+Command: tree_insert
+P2   Chang                              Supplier1      Category1      24 - 12 oz bottles       19   
+
+Command: tree_insert
+P4   Chef Anton Cajun Seasoning         Supplier2      Category2      48 - 6 oz jars           22   
+
+Command: tree_insert
+P5   Chef Anton Gumbo Mix               Supplier2      Category2      36 boxes                 21.35
+
+Command: tree_insert
+P7   Uncle Bob's Organic Dried Pears    Supplier3      Category7      12 - 1 lb pkgs.          30   
+
+Command: tree_insert
+P1   Chais                              Supplier1      Category1      10 boxes x 20 bags       18   
+
+Command: tree_insert
+P3   Aniseed Syrup                      Supplier1      Category2      12 - 550 ml bottles      10   
+
+Command: tree_insert
+P6   Grandma Boysenberry Spread         Supplier3      Category2      12 - 8 oz jars           25   
+
+Command: tree_insert
+P8   Northwoods Cranberry Sauce         Supplier3      Category2      12 - 12 oz jars          40   
+
+Command: tree_inorder
+P1   Chais                              Supplier1      Category1      10 boxes x 20 bags       18     RED    
+P2   Chang                              Supplier1      Category1      24 - 12 oz bottles       19     BLACK  
+P3   Aniseed Syrup                      Supplier1      Category2      12 - 550 ml bottles      10     RED    
+P4   Chef Anton Cajun Seasoning         Supplier2      Category2      48 - 6 oz jars           22     BLACK  
+P5   Chef Anton Gumbo Mix               Supplier2      Category2      36 boxes                 21.35  BLACK  
+P6   Grandma Boysenberry Spread         Supplier3      Category2      12 - 8 oz jars           25     RED    
+P7   Uncle Bob's Organic Dried Pears    Supplier3      Category7      12 - 1 lb pkgs.          30     BLACK  
+P8   Northwoods Cranberry Sauce         Supplier3      Category2      12 - 12 oz jars          40     RED    
+
+Command: tree_preorder
+P4   Chef Anton Cajun Seasoning         Supplier2      Category2      48 - 6 oz jars           22     BLACK  
+P2   Chang                              Supplier1      Category1      24 - 12 oz bottles       19     BLACK  
+P1   Chais                              Supplier1      Category1      10 boxes x 20 bags       18     RED    
+P3   Aniseed Syrup                      Supplier1      Category2      12 - 550 ml bottles      10     RED    
+P6   Grandma Boysenberry Spread         Supplier3      Category2      12 - 8 oz jars           25     RED    
+P5   Chef Anton Gumbo Mix               Supplier2      Category2      36 boxes                 21.35  BLACK  
+P7   Uncle Bob's Organic Dried Pears    Supplier3      Category7      12 - 1 lb pkgs.          30     BLACK  
+P8   Northwoods Cranberry Sauce         Supplier3      Category2      12 - 12 oz jars          40     RED    
+
+Command: tree_postorder
+P1   Chais                              Supplier1      Category1      10 boxes x 20 bags       18     RED    
+P3   Aniseed Syrup                      Supplier1      Category2      12 - 550 ml bottles      10     RED    
+P2   Chang                              Supplier1      Category1      24 - 12 oz bottles       19     BLACK  
+P5   Chef Anton Gumbo Mix               Supplier2      Category2      36 boxes                 21.35  BLACK  
+P8   Northwoods Cranberry Sauce         Supplier3      Category2      12 - 12 oz jars          40     RED    
+P7   Uncle Bob's Organic Dried Pears    Supplier3      Category7      12 - 1 lb pkgs.          30     BLACK  
+P6   Grandma Boysenberry Spread         Supplier3      Category2      12 - 8 oz jars           25     RED    
+P4   Chef Anton Cajun Seasoning         Supplier2      Category2      48 - 6 oz jars           22     BLACK  

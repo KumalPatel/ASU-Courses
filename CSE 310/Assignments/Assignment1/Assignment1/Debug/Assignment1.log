@@ -1,0 +1,4 @@
+﻿  Assignment1.cpp
+C:\Users\kumal\Documents\CSE310\Assignment1\Assignment1\LinkedList.h(225): warning C4715:  'LinkedList::removeProduct': not all control paths return a value
+C:\Users\kumal\Documents\CSE310\Assignment1\Assignment1\LinkedList.h(276): warning C4715:  'LinkedList::changeProductName': not all control paths return a value
+  Assignment1.vcxproj -> C:\Users\kumal\Documents\CSE310\Assignment1\Debug\Assignment1.exe

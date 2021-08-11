@@ -1,0 +1,33 @@
+Adjacency List
+
+Atlanta        Boston(288.00), Houston(375.00), 
+Boston         The arrival city list is empty
+Chicago        Atlanta(347.00), Dallas(287.00), 
+Dallas         Chicago(231.00), Houston(374.00), 
+El Paso        Chicago(504.00), Dallas(434.00), 
+Houston        El Paso(521.00), 
+Kansas         Atlanta(358.00), El Paso(622.00), New York(460.00), Phoenix(524.00), 
+Miami          Kansas(450.00), Phoenix(498.00), 
+New York       Kansas(605.00), 
+Phoenix        Raleigh(549.00), Tampa(366.00), 
+Raleigh        Washington(113.00), 
+Tampa          El Paso(592.00), Washington(313.00), 
+Washington     Phoenix(601.00), 
+
+Depth First Search Result
+
+City Name      Parent    dTime     fTime     
+=========      ======    =====     =====     
+Atlanta        none      1         12        
+Boston         Atlanta   2         3         
+Chicago        El Paso   6         9         
+Dallas         Chicago   7         8         
+El Paso        Houston   5         10        
+Houston        Atlanta   4         11        
+Kansas         none      13        24        
+Miami          none      25        26        
+New York       Kansas    14        15        
+Phoenix        Kansas    16        23        
+Raleigh        Phoenix   17        20        
+Tampa          Phoenix   21        22        
+Washington     Raleigh   18        19        

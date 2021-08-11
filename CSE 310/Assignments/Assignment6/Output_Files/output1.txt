@@ -1,0 +1,13 @@
+Adjacency List
+
+Atlanta        Boston(350.50), Dallas(456.00), 
+Boston         Dallas(672.50), 
+Dallas         Dallas(120.00), 
+
+Depth First Search Result
+
+City Name      Parent    dTime     fTime     
+=========      ======    =====     =====     
+Atlanta        none      1         6         
+Boston         Atlanta   2         5         
+Dallas         Boston    3         4         
