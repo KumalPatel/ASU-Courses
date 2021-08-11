@@ -1,0 +1,3 @@
+﻿  hw10.cpp
+c:\users\kumal\documents\cse240\hw10\hw10.cpp(290): warning C4101: 'newBook': unreferenced local variable
+  hw10.vcxproj -> C:\Users\kumal\Documents\CSE240\hw10\hw10\Debug\hw10.exe
