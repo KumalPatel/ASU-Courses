@@ -1,1 +1,1 @@
-# ASU-Courses
+# ASU Courses
