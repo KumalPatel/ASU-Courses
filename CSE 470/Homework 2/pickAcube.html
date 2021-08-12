@@ -1,0 +1,101 @@
+<!---
+//CSE 470 HW 2: pickAcube 
+//
+/*
+Written by: HW470:Kumal Patel
+Date: Feb 28, 2021
+*/ --->
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Pick a Cube</title>
+<style type="text/css">
+    canvas { background: #F3FFD9; }
+    .slider {
+        -webkit-appearance: none;
+        background: #EFEFEF;
+        border: solid lightgray 1px;
+        border-radius: 5px;
+        height: 7px;
+        outline: none;
+    }
+    .slider::-moz-range-thumb {
+        width: 13px;
+        height: 13px;
+        border: none;
+        background: #0071FF;
+        cursor: pointer;
+    }
+ 
+    .slider::-moz-range-progress {
+        height: 7px;
+        background: #0071FF;
+    }
+
+</style>
+
+<div style="font-family:verdana; font-size:12px";>
+<script id="vertex-shader" type="x-shader/x-vertex">
+
+attribute  vec4 vPosition;
+attribute  vec4 vColor;
+varying vec4 fColor;
+
+uniform mat4 modelView;
+    
+void main() 
+{                
+    gl_PointSize = 10.0;
+    gl_Position = modelView*vPosition;
+    fColor = vColor;
+} 
+
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+
+precision mediump float;
+
+varying vec4 fColor;
+
+void main()
+{
+    gl_FragColor = fColor;
+}
+</script>
+
+<script type="text/javascript" src="../Common/webgl-utils.js"></script>
+<script type="text/javascript" src="../Common/initShaders.js"></script>
+<script type="text/javascript" src="../Common/MV.js"></script>
+<script type="text/javascript" src="CreateCube.js"></script>
+<script type="text/javascript" src="pickAcube.js"></script>
+
+<body>
+<canvas id="gl-canvas" width="300" height="300" style="border:2px solid #000000;">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas><br>
+
+Make the center cube replicate motion of an outer cube.<br>
+Click canvas to pick a cube.<br>
+<button type="button" id="reset-button">reset center cube</button><br>
+
+<label for="scale-cube">scale cube 10%</label>
+<input type="range" id="scale-cube" class="slider" min="0.10" max="1.00" step="any" value="0.2" style="vertical-align:middle"></input>
+<label for="scale-cube">100%</label>
+
+<br>
+<label for="rotation-speed">rotation speed 0</label>
+<input type="range" id="rotation-speed" class="slider" min="0" max="2" step="any" value="0.2" style="vertical-align:middle"></input>
+<label for="rotation-speed">2</label>
+<br>
+
+<h1>CSE 470 HW#2: Pick a Cube</h1>
+<strong>Author: </strong>Kumal Patel
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<strong>Date: </strong>February 28, 2021</br>
+<strong>Description: </strong>
+This program can scale and speed up the rotation of the rotating cubes. And once the outer cube is click on the center cube will have the same rotation, and the rotation of the center cube can be reset with the reset button.
+<br><strong>Resources: </strong>
+Prof. Angel's codes. and referenced MV.js. in the commons.
+</body>
+</html>

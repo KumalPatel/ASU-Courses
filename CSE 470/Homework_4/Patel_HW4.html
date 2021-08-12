@@ -1,0 +1,71 @@
+<!-- Name: Kumal Patel -->
+<html>
+<head> 
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute  vec4 vPosition;
+attribute vec4 vNormal;
+attribute vec2 vTexCoord;
+attribute vec4 vColor;
+uniform vec4 ambientProduct, diffuseProduct, specularProduct;
+uniform vec4 emissive;
+uniform float shininess; 
+
+uniform mat4 modelViewMatrix;
+uniform mat4 projectionMatrix;
+uniform vec4 color;
+precision mediump float;
+varying vec2 fTexCoord;
+
+uniform vec3 theta;
+
+varying vec4 fcolor;
+    
+void main() 
+{
+    fcolor = color;
+    fTexCoord = vTexCoord;
+    gl_Position = projectionMatrix * modelViewMatrix * vPosition;
+} 
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+varying vec4 fcolor;
+varying vec2 fTexCoord;
+
+uniform sampler2D Tex0;
+uniform sampler2D Tex1;
+
+void main()
+{
+    gl_FragColor = fcolor*(texture2D(Tex0, fTexCoord)*texture2D(Tex1, fTexCoord));
+}
+</script>
+
+<script type="text/javascript" src="../Common/webgl-utils.js"></script>
+<script type="text/javascript" src="../Common/InitShaders.js"></script>
+<script type="text/javascript" src="../Common/MV.js"></script>
+<script type="text/javascript" src="Patel_HW4.js"></script>
+<link rel="stylesheet" href="tailwind.css">        
+
+</head>
+<body class="font-sans container mx-auto flex flex-col justify-content items-center">
+    <div class="grid justify-items-center text-5xl py-8">
+        <h1>Kumal Patel</h1>
+            <p class="text-2xl pt-2">April 23, 2021</p>     
+    </div>
+        <div class="px-4 leading-loose flex flex-col justify-around items-center">
+            <p class="p-2"><b>Description:</b> 3d model constructed using a hierarchical model. You can toggle the animation to a moving scene.
+        </p>
+        <p class="p-2"><b>Resources</b>: Prof. Angel's codes, lecture slides, reviewed files in commons.</p>
+            <div class="py-4 flex justify-center items-center">
+            <button id="animation-toggle"class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded focus:outline-none focus:ring-2 active:bg-blue-700">
+                Toggle Animation
+            </button>
+        </div>
+        <canvas class="mt-8" id="gl-canvas" width="600" height="600" style="background-color: gray;">
+        Oops ... your browser doesn't support the HTML5 canvas element
+        </canvas>
+    </div>
+</body>
+</html>
