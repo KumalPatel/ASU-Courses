@@ -4,6 +4,3 @@ wechall name: kspatel8
 8. Used sort data.txt | uniq -u to remove all duplicate texts.
 9. Used strings data.txt | grep "=". where strings displays all readable strings and grep "=" searches for the file for that string
 10. Used base64 --decode data.txt to decode the base64 encrypted file.
-
-
-IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
