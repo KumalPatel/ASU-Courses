@@ -1,0 +1,86 @@
+i, j, k;
+{
+	input i;
+  	i = 5 ;
+    j = 5 + i ;
+    k = 20;
+	output i;
+	output j;
+    IF i > j
+    {
+        output k;
+    }
+    g = 15;
+    h = 403;
+    output g;
+
+    SWITCH h
+    {
+        CASE 23:
+            {
+                h = 50;
+                output h;
+            }
+        CASE 5:
+            {
+                h = 200;
+                output h;
+            }
+        CASE 40:
+            {
+                h = 40;
+                output h;
+            }
+        DEFAULT:
+            {
+                h = 170;
+                output h;
+                g = 32;
+                k = 5;
+                    
+                SWITCH k
+                {
+                    CASE 5:
+                    {
+                        k = 5;
+                        output k;
+                        f = 0;
+                        
+                        SWITCH f
+                        {
+                            CASE 14:
+                            {
+                                a = 7;
+                                output a;
+                            }
+                            CASE 11:
+                            {
+                                a = 1;
+                                output a;
+                            }
+                             DEFAULT:
+                            {
+                                a = 33;
+                                output a;
+                            }
+                        }
+                    }
+                        
+                    CASE 10:
+                    {
+                        k = 10;
+                        output k;
+                    }
+
+                    DEFAULT:
+                    {
+                         k = 1;
+                         output k;
+                    }
+                }
+                
+            }
+    }
+    output g;
+}
+1 2 3
