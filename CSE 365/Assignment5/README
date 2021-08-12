@@ -1,0 +1,48 @@
+Name: Kumal Patel
+ASUID: 1208493243
+MD5: 7wzbLH
+SHA256: pG0nsEa
+bcrypt: login
+custom: jcdbj
+custom ec:
+Description:
+	Code for parts 1-4:
+		1: !./hashcat64.bin -m 0 -a 3 50a9e5d13938e0062d17295e4b4b3d95 ?a?a?a?a?a?a
+		2. !./hashcat64.bin -m 1400 -a 3 -1 ?l?u?d 3414d126c606a32d6d824b5185ed3c405c917c9c79eae6a80f1b0227c373c8fc ?1?1?1?1?1?1?1
+		3.!./hashcat64.bin -m 3200 -a 0 '$2b$12$j0MfCesBn.Ek9SFxXWPoSeLmqbKVbEELL28pJUB9I/dXs159JVGLS' 100k-most-used-passwords-NCSC.txt
+		4.
+			import hashlib
+
+			def md5_hash(str):
+  				result = hashlib.md5(str.encode()).hexdigest()
+  				return result
+
+			def sha256_hash(str):
+  				result = hashlib.sha256(str.encode()).hexdigest()
+  				return result
+
+			def sha512_hash(str):
+  				result = hashlib.sha512(str.encode()).hexdigest()
+  				return result
+
+			def calc(temp):
+ 				for x in range(0,100):
+    					result = md5_hash(temp)
+    					temp = result
+
+  				for x in range(0,100):
+   					result = sha256_hash(temp)
+    					temp = result
+
+  				for x in range(0,100):
+    					result = sha512_hash(temp)
+    					temp = result
+  				return temp
+
+			with open("potential.txt") as fp:
+  				while True:
+    					line = fp.readline()
+    					line = line.rstrip("\n")
+    					if(calc(line) == "c4975162eafeb23e0615549330307a8bc51b2bd8190b9cbe22fd39d5e0aa1e0d479564ce5832553a873d8a33a2e2abe58c134f5a7ea329b700d96668ef3a2c03"):
+      						print("yes,", line)
+      						break

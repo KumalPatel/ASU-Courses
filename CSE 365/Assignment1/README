@@ -1,0 +1,20 @@
+wechall name: kspatel8
+
+level 0:
+	Used the password that was given and checked the directory. Then used the cat command to access that new password.
+
+level 1:
+	Used the password that we got from the previous level. Then saw the file in the directory was a dash and when i tried accessing it, it was running, so i used cat ./- and that fixed the problem.
+
+level 2:
+	I saw that the file in the directory was a string because of the spaces in the name. So to get access to the password i put in cat and the string with quotes.
+
+level 3:
+	The file that was in the directory was another directory. And when i went inside that directory it was empty so i checked if there was any hidden files and i saw one, and when i used cat on that i was able to get the next password.
+
+level 4:
+	The file that was in there was another directory. And when i went into that directory i was a lot of different files, so i was thinking most were make and there is going to be one real one with the password. So i did file ./* to see which file was real and then i went to that file to gain access to the next level.
+
+level 5:
+	The file that was needed to be found was hidden behind several directories. The properties of the file was given so i used the find command with those constraints to find the password to the next level.
+-- placeholder text for the password to the next level DXjZPULLxYr17uwoI01bNLQbtFemEgo7	

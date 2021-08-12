@@ -1,0 +1,2 @@
+key: 0x77
+explanantion: bruteforced numbers from 1-256 in hex to check which was readable to find the key.

@@ -1,0 +1,2 @@
+key: Y
+Explanantion: Wrote a brute force to test all outcomes. Taking each character of the cipher text and taking the difference from 1-25.

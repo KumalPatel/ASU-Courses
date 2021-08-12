@@ -1,0 +1,9 @@
+wechall name: kspatel8
+6. Used find / -user bandit7 -group bandit6 -size 33c 2>/dev/null. Used find to locate directory with these properties and 2>/dev/null displays only the ones i have access to.
+7. Used cat man.txt grep | "millionth". Used grep to search the file containing the string pipelined.
+8. Used sort data.txt | uniq -u to remove all duplicate texts.
+9. Used strings data.txt | grep "=". where strings displays all readable strings and grep "=" searches for the file for that string
+10. Used base64 --decode data.txt to decode the base64 encrypted file.
+
+
+IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
