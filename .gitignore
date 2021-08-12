@@ -12,3 +12,4 @@ bin/
 *.fls
 *.log
 *.synctex.gz
+*.synctex(busy)
