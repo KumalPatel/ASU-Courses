@@ -1,0 +1,147 @@
+\documentclass[letterpaper, 12pt]{article}
+\title{CSE471 - Homework 5}
+\author{Kumal Patel}
+\date{\today}
+
+\usepackage{subcaption, float}
+\usepackage[table]{xcolor}
+\begin{document}   
+\maketitle
+
+
+
+\begin{enumerate}
+    \item[Exercise 1.1] 
+        \begin{enumerate}
+            \item $V^*(s) = R(s) + \gamma max_a[\sum\limits_{s'} T(s,a,s')V^*(s')]$ \\\\
+              $V^*(s) = max_a[R(s,a) + \gamma \sum\limits_{s'} T(s,a,s')V^*(s')]$
+            \item 
+            \item 
+        \end{enumerate}
+        
+    \item[Exercise 1.2].
+    \begin{table}[H]
+        \caption{Policy for different reward values}
+        \begin{subtable}{.5\linewidth}
+          \centering
+            \begin{tabular}{|c|c|c|} \hline
+                \cellcolor[HTML]{F8CECC}$\uparrow$ & $\leftarrow$ & \cellcolor[HTML]{A5F19E}+10 \\ \hline
+                $\uparrow$ & $\leftarrow$ & $\downarrow$ \\ \hline
+                $\uparrow$ & $\leftarrow$ & $\leftarrow$ \\ \hline
+            \end{tabular}
+            \caption{r = 100}
+        \end{subtable}
+        \begin{subtable}{.5\linewidth}
+          \centering
+            \begin{tabular}{|c|c|c|} \hline
+                \cellcolor[HTML]{F8CECC}$\rightarrow$ & $\rightarrow$ & \cellcolor[HTML]{A5F19E}+10 \\ \hline
+                $\rightarrow$ & $\rightarrow$ & $\uparrow$ \\ \hline
+                $\rightarrow$ & $\rightarrow$ & $\uparrow$ \\ \hline
+            \end{tabular}
+            \caption{r = -3}
+        \end{subtable} 
+        \\ \\ \\
+        \begin{subtable}{.5\linewidth}
+            \centering
+              \begin{tabular}{|c|c|c|} \hline
+                \cellcolor[HTML]{F8CECC}$\rightarrow$ & $\rightarrow$ & \cellcolor[HTML]{A5F19E}+10 \\ \hline
+                $\uparrow$ & $\uparrow$ & $\uparrow$ \\ \hline
+                $\uparrow$ & $\uparrow$ & $\uparrow$ \\ \hline
+              \end{tabular}
+              \caption{r = 0}
+          \end{subtable} 
+          \begin{subtable}{.5\linewidth}
+            \centering
+              \begin{tabular}{|c|c|c|} \hline
+                \cellcolor[HTML]{F8CECC}$\leftarrow$ & $\leftarrow$ & \cellcolor[HTML]{A5F19E}+10 \\ \hline
+                $\uparrow$ & $\leftarrow$ & $\uparrow$ \\ \hline
+                $\uparrow$ & $\leftarrow$ & $\leftarrow$ \\ \hline
+              \end{tabular}
+              \caption{r = 3}
+          \end{subtable} 
+    \end{table}
+
+    \begin{enumerate}
+        \item Since the reward value is 100 and is larger than the value of agent being in the final state. 
+        The policy should represent a set of actions to ensure that the agent stays in the reward state and avoid the final state. 
+        And because this environment is stochastic the actions must be perpendicular to direction with 0.1 probability. 
+        To ensure the agent doesn't reach the final state the action before should be in the opposite direction.
+        \item Since the reward value is -3 the agent would try to avoid this location and just go towards the final state.
+        The policy should represent a set of actions that ensure the agent avoids the reward state and heads towards the final state.
+
+        \item Since the reward value is 0 and the white squares is -1 the agent would want to go to the reward state before going to the final state.
+        The policy should represent a set of actions to ensure this happens.
+
+        \item Since the reward value is 3 the agent would want to stay in this location and avoid the final state. The same reasonings were applied to question a. 
+    \end{enumerate}
+        
+    \item[Exercise 1.3] 
+         $R(Up) = 50 - (\gamma + \gamma^2 + \gamma^3 .. + \gamma^{100}) = 
+                50 - \sum\limits_{n=1}^{100} \gamma^n$ \\\\
+         $R(Down) = -50 - (\gamma + \gamma^2 + \gamma^3 ... + \gamma^{100}) = 
+                -50 - \sum\limits_{n=1}^{100} \gamma^n$ \\ 
+  
+         $50 - \sum\limits_{n=1}^{100} \gamma^n = -50 - \sum\limits_{n=1}^{100} \gamma^n$ \\\\  
+         $100 - \sum\limits_{n=1}^{100} \gamma^n = - \sum\limits_{n=1}^{100} \gamma^n$ \\\\
+         $100 = 2\sum\limits_{n=1}^{100} \gamma^n$ \\\\
+         $50 = \sum\limits_{n=1}^{100} \gamma^n$ \\\\
+         $\gamma = 0.984398$ \\
+
+         When $\gamma < 0.984398$ the agent will choose the Up action 
+         and when $\gamma > 0.984398$ the agent will choose the Down action.
+    
+    \item[Exercise 1.4] 
+      $V^{\pi_0}(cool) = 1*[1+0.5*V^{\pi_0}(cool)] = 2$ \\\\
+      $V^{\pi_0}(warm) = 1*[-10+0.5*V^{\pi_0}(overheated)] = 0.5$ \\\\
+
+      $\pi_1(cool) = argmax\{slow: 1*[1+0.5*2], fast: 0.5[2+0.5*2] + 0.5[2+0.5*0.5]\}$ \\\\
+      $\pi_1(cool) = argmax\{slow: 2, fast: 2.625\}$ \\\\
+      $\pi_1(cool) = fast$ \\\\
+
+      $\pi_1(warm) = argmax\{slow: 0.5*[1+0.5*2]+0.5[1+0.5*0.5], fast: 1*[-10+0.5*0]\}$ \\\\
+      $\pi_1(warm) = argmax\{slow: 1.625, fast: -10\}$ \\\\
+      $\pi_1(warm) = slow$ \\\\
+
+      $\pi_2(cool) = argmax\{slow: 1*[1+0.5*2.625], fast: 0.5[2+0.5*2.625] + 0.5[2+0.5*1.625]\}$ \\\\
+      $\pi_2(cool) = argmax\{slow: 2.3125, fast: 3.0625\}$ \\\\
+      $\pi_2(cool) = fast$ \\\\
+
+      $\pi_2(warm) = argmax\{slow: 0.5*[1+0.5*1.625]+0.5[1+0.5*2.625], fast: 1*[-10+0.5*0]\}$ \\\\
+      $\pi_2(warm) = argmax\{slow: 2.0625, fast: -10\}$ \\\\
+      $\pi_2(warm) = slow$ \\\\
+
+      \begin{table}[H]
+        \caption{Policy iteration showing the optimal policy}
+        \begin{subtable}{.5\linewidth}
+          \centering
+            \begin{tabular}{|c|c|c|c|} \hline
+              & \textbf{cool} & \textbf{warm} & \textbf{overheated}\\ \hline
+              $V^{\pi_0}$ & 2 & 0.5 & 0 \\ \hline
+              $V^{\pi_1}$ & 2.625 & 1.625 & 0 \\ \hline
+              $V^{\pi_2}$ & 3.0625 & 2.0625 & 0 \\ \hline
+            \end{tabular}
+        \end{subtable}
+        \begin{subtable}{.5\linewidth}
+          \centering
+            \begin{tabular}{|c|c|c|} \hline
+              & \textbf{cool} & \textbf{warm} \\ \hline
+              $\pi_0$ & slow & fast \\ \hline
+              $\pi_1$ & fast & slow \\ \hline
+              $\pi_2$ & fast & slow \\ \hline
+            \end{tabular}
+        \end{subtable} 
+      \end{table}
+
+    \item[Exercise 1.5]
+        \begin{enumerate}
+            \item T(cool, slow, cool) = 1.0 \\ T(cool, fast, cool) = 0.5 \\ T(cool, fast, warm) = 0.5 \\
+              T(warm, fast, overheated) = 1.0 \\ T(warm, slow, warm) = 0.75 \\ T(warm, slow, cool) = 0.25 \\ 
+
+              R(cool, slow, cool) = 1 \\ R(cool, fast, cool) = 2 \\ R(cool, fast, warm) = 2 \\
+              R(warm, fast, overheated) = -10 \\ R(warm, slow, warm) = 1 \\ R(warm, slow, cool) = 1
+            \item V(cool) = $\frac{-34}{7} = -4.857$ \\ V(warm) = $\frac{-44}{6} = -7.333$ 
+            \item 
+            \item 
+        \end{enumerate} 
+\end{enumerate}
+\end{document}

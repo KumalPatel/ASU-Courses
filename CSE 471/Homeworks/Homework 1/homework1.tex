@@ -1,0 +1,86 @@
+\documentclass[letterpaper, 12pt]{article}
+\title{CSE471 - Homework 1}
+\author{Kumal Patel}
+\date{\today}
+
+
+\begin{document}
+    
+\maketitle
+
+\begin{enumerate}
+    \item[Exercise 1.1] 
+        A good real-world example to this problem would involve sports. The agent would need to play against 
+        an opponent and be able to score more within a fixed amount of time. The performance measure is
+        only concerned with the first T steps of the environment, therefore the duration of the game 
+        would be the T steps. In a game of basketball the agent would interact with the basketball court, 
+        their opponent, and the basketball. The agent would need to be able to move around and handle the 
+        basketball which uses a variety of motors. It would also need cameras and other sensors to be able
+        to sense the state of the environment which is used to determine the agents action. The agent 
+        would also need a time sensor so the agent would know when the game is concluded.
+    \item[Exercise 1.2] 
+    The PEAS as discussed in class:
+        P - clean the room
+        E - dirt, location, vacuum
+        A - left, right, suck, no-op
+        S - location, status.
+    \begin{enumerate}
+        \item 
+        False, this agent is rational but the task environment is only partially observable. This agent 
+        location sensor is now local and cannot tell if there is dirt in the adjacent square. 
+        With the PEAS remaining the same.
+        \item 
+        True, since a simple reflex agent performs actions based on its current percept, if your task
+        environment is now changed to remember the order in which the dirt was sucked (A or B squares). 
+        PEAS being: P - Recall the location of the dirt that has been sucked and clean the room,
+        E - dirt, location, vacuum A - left, right, suck, no-op, display S - location, status. To recall the order
+        of dirt that was being sucked the agent would need to remember the sequence of percepts, and not 
+        just the current percept.
+        \item 
+        True, if the task environment equally benefits all rational agents. P - picks up dirt E - dirt, location, vacuum
+        A - left, right, suck, no-op S - location, status. Since the task environment rewards the agent if it picks up dirt at least once
+        then regardless of any other outcome the agent is rational.
+        \item True, similar to the previous problem where all actions return the same reward, equally beneficial. 
+        P - picks up dirt E - dirt, location, vacuum A - left, right, suck, no-op S - location, status.
+        Selecting a random action that results uniformly will be rational, since the agent will still pick up dirt.
+        \item False, an agent would need to perceive as it moves around to be rational. PEAS being: 
+        P - clean the room E - n/a A - left, right, suck, no-op S - location, status. Since the environment is 
+        unobservable the agent cannot detect anything in the environment; so the agent is therefore, not rational.
+    \end{enumerate} 
+    \item[Exercise 1.3] 
+    \begin{enumerate}
+        \item 
+        No, since the agent can only perceive its current location and the status. This agent cannot tell
+        weather there are obstacles around it, so if it crashes into an obstacle then the agent has no way of escaping.
+        \item 
+        If the simple reflex agent randomly moves until if finds dirt to suck this design would outperform
+        the other simple reflex agent because the random movement helps to escape if it ever gets stuck 
+        behind any obstacles.
+        \item 
+        Yes, if there are two large rooms connection via a narrow hallway, it will take a long time and more
+        movements for the randomized agent to get to the other room. 
+    \end{enumerate} 
+    \item[Exercise 1.4]
+    \begin{enumerate}
+        \item A goal-based agent best describes this behavior. This agent has a goal in mind and makes a decision to 
+        reduce the distance from its goal. In this scenario, the agent is trying to reach the goal, and the decision making is
+        to make a left turn whenever it encounters an obstacle, then it proceeds to move towards the goal. 
+        
+        \begin{tabbing}
+            if\=(agent is not in goal) \{ \\
+             \> while\=(agent encounters obstacle) \\
+                \> \> turn left; \\
+                \> move towards goal; \\ 
+            \}
+        \end{tabbing}
+
+        \item Yes, the agent will be able to find its way out from the paths exit to the goal state.
+        The agent continuously makes a left when there is an obstacle in its path; otherwise, it will head 
+        toward the goal if possible. So, with a closed obstacle that contains an exit the agent will head
+        closest to the goal and if there is an obstacle there it will turn until it can freely move. So it
+        will travel around until it finds the exit then head towards the goal.
+        
+    \end{enumerate}   
+\end{enumerate}
+
+\end{document}

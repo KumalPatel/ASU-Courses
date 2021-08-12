@@ -1,0 +1,47 @@
+\documentclass[letterpaper, 12pt]{article}
+\title{CSE471 - Homework 2}
+\author{Kumal Patel}
+\date{\today}
+
+\begin{document}   
+\maketitle
+
+\begin{enumerate}
+    \item[Exercise 1.1] 
+    \begin{enumerate}
+        \item A case where breadth-first search would perform identical to uniform-cost search is when the action costs are ordered from least to greatest per level. So yes, in this circumstance breadth-first search is a speacial case of uniform-cost search.
+        \item No, depth-first search is not a a special case for best-first search. Depth-first search is an uninformed search algorithm so when the goal node is generated it stops. If the goal state is at the maximum depth depth-first and best-first search would act similarly but depth-first search would not include the heuristics. So best-first search would still outperform depth-first search.
+        \item No, A* search is a combination of uniform-cost search and greedy search. It is possible A* to behave identically to uniform-cost search if the heuristics was 0, but doesn't mean that uniform-cost search is a special case for A* search.
+    \end{enumerate} 
+    \item[Exercise 1.2] 
+    \begin{enumerate}
+        \item The branching factor would be 4.
+        \item There would be $4k$ states at a depth of k.
+        \item The maximum nodes expanded by breadth-first search would be $4^{x+y}$. Where breadth-first search has a space complexity of $O(b^d)$.
+        \item The maximum distinct nodes is also $4^{x+y}$ because every node visited is unique.
+        \item The maximum number of nodes expanded by breadth-first graph search would be $4(x+y)$ because we wont visit any node more than once.
+        \item Yes, it is an admissable heuristic because it never overestimates the cost by being in a 2D grid. 
+        \item $x+y$ nodes are expanded when using A* graph search because all the paths are optimal.
+        \item Yes, removing links will remain as an underestimate because this causes the paths to be longer.
+        \item No, adding links would cause this solution to no longer be an underestimate by making some paths more optimal.
+    \end{enumerate} 
+    \item[Exercise 1.3] 
+    \begin{enumerate}
+        \item The state space is $n^{2n}$       
+        \item The branching factor is $5^n$
+        \item Using the manhattan distance would give us the exact cost moving to the goal, and any other cars that are in the way can be ignored. So, the heuristic function would be: $h(n)=(n-i+1)-x_i+(n-y_i)$
+        \item 
+        \begin{enumerate}
+            \item If the heuristic of the cars is the sum of all the previous heuristic this is inadmissable because this would trap good plans on the fringe because of the heuristic value, it would choose less ideal paths.
+            \item Taking the max of the heuristic would be inadmissable because it also ensures you take the less ideal path when you have a larger heuristic value.
+            \item If the the car is at its minimum heuristic that means its value is 0, and thus at its goal state, and therefore admissable. 
+        \end{enumerate}
+    \end{enumerate} 
+    \item[Exercise 1.4]
+    \begin{enumerate}
+        \item Using an algorithm where it considers the action cost would be uniform-cost search, where the least cost action would find a more ideal path. So, using A* search algorithm that combines both would be ideal.
+        \item A heuristic that will find the optimal path is one that takes the sum of the heuristics since the action cost already finds the shortest math, so eliminating some some paths would make it admissable.          
+    \end{enumerate}   
+\end{enumerate}
+
+\end{document}
