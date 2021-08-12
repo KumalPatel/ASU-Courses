@@ -1,0 +1,54 @@
+-T
+"How neural networks work - and why they've become a big business"
+-E
+-D
+-N
+     The last decade has seen remarkable improvements in the ability of computers to understand the world around them. Photo software automatically recognizes people's faces. Smartphones transcribe spoken words into text. Self-driving cars recognize objects on the road and avoid hitting them.
+-E
+-S
+-C
+
+Underlying these breakthroughs is an artificial intelligence technique called deep learning. Deep learning is based on neural networks, a type of data structure loosely inspired by networks of biological neurons. Neural networks are organized in layers, with inputs from one layer connected to outputs from the next layer.
+-E
+-D
+-R
+Computer scientists have been experimenting with neural networks since the 1950s. But two big breakthroughs - one in 1986, the other in 2012 - laid the foundation for today's vast deep learning industry. The 2012 breakthrough - the deep learning revolution - was the discovery that we can get dramatically better performance out of neural networks with not just a few layers but with many. That discovery was made possible thanks to the growing amount of both data and computing power that had become available by 2012.
+-E
+-S
+-L
+-2
+This feature offers a primer on neural networks. We'll explain what neural networks are, how they work, and where they came from. And we'll explore why - despite many decades of previous research - neural networks have only really come into their own since 2012.
+-E
+-D
+This is the first in a multi-part series on machine learning - in future weeks we'll take a closer look at the hardware powering machine learning, examine how neural networks have enabled the rise of deep fakes, and much more.
+-E
+-1
+-T
+Neural networks date back to the 1950s
+-E
+-S
+Neural networks are an old idea - at least by the standards of computer science. Way back in 1957, Cornell University's Frank Rosenblatt published a report describing an early conception of neural networks called a perceptron. In 1958, with support from the US Navy, he built a primitive system that could analyze a 20-by-20 image and recognize simple geometric shapes.
+-E
+-D
+Rosenblatt's main objective wasn't to build a practical system for classifying images. Rather, he was trying to gain insights about the human brain by building computer systems organized in a brain-like way. But the concept garnered some over-the-top enthusiasm.
+-B
+-S
+"The Navy revealed the embryo of an electronic computer today that it expects will be able to walk, talk, see, write, reproduce itself and be conscious of its existence," The New York Times reported.
+-E
+-D
+Fundamentally, each neuron in a neural network is just a mathematical function. Each neuron computes a weighted sum of its inputs - the larger an input's weight, the more that input affects the neuron's output. This weighted sum is then fed into a non-linear function called an activation function - a step that enables neural networks to model complex non-linear phenomena.
+-E
+-S
+The power of Rosenblatt's early perceptron experiments - and of neural networks more generally - comes from their capacity to "learn" from examples. A neural network is trained by adjusting neuron input weights based on the network's performance on example inputs. If the network classifies an image correctly, weights contributing to the correct answer are increased, while other weights are decreased. If the network misclassifies an image, the weights are adjusted in the opposite direction.
+-E
+-D
+This procedure allowed early neural networks to "learn" in a way that superficially resembled the behavior of the human nervous system. The approach enjoyed a decade of hype in the 1960s. But then an influential 1969 book by computer scientists Marvin Minsky and Seymour Papert demonstrated that these early neural networks had significant limitations.
+-E
+-S
+Rosenblatt's early neural networks only had one or two trainable layers. Minsky and Papert showed that such simple networks are mathematically incapable of modeling complex real-world phenomena.
+-E
+-D
+In principle, deeper neural networks were more versatile. But deeper networks would have strained the meager computing resources available at the time. More importantly, no one had developed an efficient algorithm to train deep neural networks. The simple hill-climbing algorithms used in the first neural networks didn't scale for deeper networks.
+-E
+-S
+As a result, neural networks fell out of favor in the 1970s and early 1980s - part of that era's "AI winter."
