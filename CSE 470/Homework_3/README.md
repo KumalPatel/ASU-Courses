@@ -1,7 +1,7 @@
 # Surface of Revolution
 
 ## How it Works
-First built by creating surfaces parametrized
+First built by creating parametrized surfaces
 ```
        [ G(t) ]
 F(t) = [   t  ]   t ∈ [-1,1] ; where G(t) is the generator function that is rotated along the y-axis
