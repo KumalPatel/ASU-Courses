@@ -1,4 +1,4 @@
-# Surface of Revolution
+# Revolve 3D
 
 ## How it Works
 First built by creating parametrized surfaces
